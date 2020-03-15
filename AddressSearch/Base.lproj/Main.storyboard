@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--우편번호 검색-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AddressSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NVe-8p-Rbf"/>
+                    <navigationItem key="navigationItem" title="우편번호 검색" id="NVe-8p-Rbf"/>
                     <connections>
                         <outlet property="jibunLabel" destination="Vl8-zO-siH" id="Awl-gI-Buk"/>
                         <outlet property="postCodeLabel" destination="Dda-cG-rBL" id="BcH-2g-r3d"/>
@@ -138,29 +138,30 @@
         <!--Webview View Controller-->
         <scene sceneID="Kwm-jT-FsN">
             <objects>
-                <viewController id="9oE-X5-PlX" customClass="WebviewViewController" customModule="AddressSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webviewVC" id="9oE-X5-PlX" customClass="WebviewViewController" customModule="AddressSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKY-BI-H0t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X34-V2-HGY">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBE-wS-piN">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NDX-Gr-G05" firstAttribute="trailing" secondItem="X34-V2-HGY" secondAttribute="trailing" id="1uR-xn-SWL"/>
-                            <constraint firstItem="NDX-Gr-G05" firstAttribute="bottom" secondItem="X34-V2-HGY" secondAttribute="bottom" id="8r8-r6-8Ti"/>
-                            <constraint firstItem="X34-V2-HGY" firstAttribute="top" secondItem="NDX-Gr-G05" secondAttribute="top" id="C0V-4p-45S"/>
-                            <constraint firstItem="X34-V2-HGY" firstAttribute="leading" secondItem="NDX-Gr-G05" secondAttribute="leading" id="wal-Iy-huc"/>
+                            <constraint firstItem="NDX-Gr-G05" firstAttribute="trailing" secondItem="PBE-wS-piN" secondAttribute="trailing" id="7rH-Xg-AEb"/>
+                            <constraint firstItem="PBE-wS-piN" firstAttribute="centerY" secondItem="NDX-Gr-G05" secondAttribute="centerY" id="9en-An-8YU"/>
+                            <constraint firstItem="PBE-wS-piN" firstAttribute="top" secondItem="NDX-Gr-G05" secondAttribute="top" id="HQE-n0-ekS"/>
+                            <constraint firstItem="NDX-Gr-G05" firstAttribute="bottom" secondItem="PBE-wS-piN" secondAttribute="bottom" id="TGA-U9-Smf"/>
+                            <constraint firstItem="PBE-wS-piN" firstAttribute="centerX" secondItem="NDX-Gr-G05" secondAttribute="centerX" id="e12-Sb-M5j"/>
+                            <constraint firstItem="PBE-wS-piN" firstAttribute="leading" secondItem="NDX-Gr-G05" secondAttribute="leading" id="jH5-dj-aEk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NDX-Gr-G05"/>
                     </view>
+                    <connections>
+                        <outlet property="webContainerView" destination="PBE-wS-piN" id="8yc-eU-275"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIM-BU-Zi2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

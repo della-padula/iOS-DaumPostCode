@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var roadLabel     : UILabel!
     
     @IBAction func onClickSearch(_ sender: Any) {
-        
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "webviewVC") as! WebviewViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func onClickSave(_ sender: Any) {

@@ -13,6 +13,7 @@
 		DE744519241DEA600062C113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE744518241DEA600062C113 /* Assets.xcassets */; };
 		DE74451C241DEA600062C113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE74451A241DEA600062C113 /* LaunchScreen.storyboard */; };
 		DE744524241DEC020062C113 /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE744523241DEC020062C113 /* WebviewViewController.swift */; };
+		DE744529241E0B560062C113 /* address.html in Resources */ = {isa = PBXBuildFile; fileRef = DE744528241E0B560062C113 /* address.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DE74451B241DEA600062C113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE74451D241DEA600062C113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE744523241DEC020062C113 /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
+		DE744528241E0B560062C113 /* address.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = address.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				DE74450F241DEA5D0062C113 /* AppDelegate.swift */,
+				DE744528241E0B560062C113 /* address.html */,
 				DE744513241DEA5D0062C113 /* ViewController.swift */,
 				DE744515241DEA5D0062C113 /* Main.storyboard */,
 				DE744518241DEA600062C113 /* Assets.xcassets */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE74451C241DEA600062C113 /* LaunchScreen.storyboard in Resources */,
+				DE744529241E0B560062C113 /* address.html in Resources */,
 				DE744519241DEA600062C113 /* Assets.xcassets in Resources */,
 				DE744517241DEA5D0062C113 /* Main.storyboard in Resources */,
 			);
