@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol AddressSearchResultDelegate {
+    func didSelectAddress(selectedAddress: Address?)
+}
+
+class ViewController: UIViewController, AddressSearchResultDelegate {
     @IBOutlet weak var viewForCapture: UIView!
     @IBOutlet weak var searchButton  : UIButton!
     @IBOutlet weak var postCodeLabel : UILabel!
@@ -16,7 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var roadLabel     : UILabel!
     
     @IBAction func onClickSearch(_ sender: Any) {
-        let vc = self.storyboard!.instantiateViewController(withIdentifier: "webviewVC") as! WebviewViewController
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "addressSearchVC") as! AddressSearchViewController
+        vc.delegate = self
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -47,6 +53,13 @@ class ViewController: UIViewController {
                 // save
             print("Image Saved")
            }
+    }
+    
+    // Delegate Method
+    func didSelectAddress(selectedAddress: Address?) {
+        self.postCodeLabel.text = selectedAddress?.postCode ?? "nil"
+        self.jibunLabel.text = selectedAddress?.addressName ?? "nil"
+        self.roadLabel.text = selectedAddress?.roadAddr ?? "nil"
     }
 }
 
