@@ -58,8 +58,8 @@ class ViewController: UIViewController, AddressSearchResultDelegate {
     // Delegate Method
     func didSelectAddress(selectedAddress: Address?) {
         self.postCodeLabel.text = selectedAddress?.postCode ?? "nil"
-        self.jibunLabel.text = selectedAddress?.addressName ?? "nil"
-        self.roadLabel.text = selectedAddress?.roadAddr ?? "nil"
+        self.jibunLabel.text = selectedAddress?.jibunAddr ?? "nil"
+        self.roadLabel.text = "\(selectedAddress?.depthOneAddr ?? "nil") \(selectedAddress?.deptTwoAddr ?? "nil") \(selectedAddress?.deptThreeAddr ?? "nil")"
     }
 }
 
